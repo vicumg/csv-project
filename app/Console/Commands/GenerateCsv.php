@@ -49,7 +49,7 @@ class GenerateCsv extends Command
         $fieldSet->addField(DataType::FirstName, "first_name");
         $fieldSet->addField(DataType::LastName, "last_name");
         $fieldSet->addField(DataType::Age, "age");
-        $fieldSet->addField(DataType::Gender, "age");
+        $fieldSet->addField(DataType::Gender, "gender");
         $fieldSet->addField(DataType::MobileNumber, "mobile_number");
         $fieldSet->addField(DataType::Email, "email");
         $fieldSet->addField(DataType::City, "city");
