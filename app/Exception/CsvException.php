@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Module\Csv;
+namespace App\Exception;
 
 class CsvException extends \Exception
 {
