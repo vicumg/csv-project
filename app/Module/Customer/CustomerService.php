@@ -41,4 +41,9 @@ class CustomerService
 
         fclose($file);
     }
+
+    public function getCustomers(CustomerRequest $request)
+    {
+        return $this->customerRepository->getCustomers($request);
+    }
 }
