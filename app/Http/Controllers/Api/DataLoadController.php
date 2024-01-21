@@ -17,13 +17,13 @@ class DataLoadController extends Controller
     public function __invoke(Request $request): JsonResponse
     {
 
-       //validate if file exist
         if (!$request->hasFile('file')) {
             return response()->json([
                 'message' => 'File is required',
             ], 400);
         }
 
+        //todo allow zip files
         if ($request->file('file')->getClientOriginalExtension() !== 'csv') {
             return response()->json([
                 'message' => 'File must be a CSV',
