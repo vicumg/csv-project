@@ -61,11 +61,13 @@ class CustomerRequest
         }
 
         if ($request->has('limit')) {
-            $this->limit = (int)$request->get('limit');
+            $limit = (int)$request->get('limit');
+            $this->limit = ($limit > 0 && $limit < 1000) ? $limit : $this->limit;
         }
 
         if ($request->has('offset')) {
-            $this->offset = (int)$request->get('offset');
+            $offset = (int)$request->get('offset');
+            $this->offset = ($offset > 0) ? $offset : $this->offset;
         }
 
     }
